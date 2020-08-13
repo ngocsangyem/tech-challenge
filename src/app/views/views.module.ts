@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { ViewsComponent } from './views.component';
+import { BookEditComponent } from './components/book-edit/book-edit.component';
 
 @NgModule({
 	declarations: [
@@ -16,6 +17,7 @@ import { ViewsComponent } from './views.component';
 		HeaderComponent,
 		FooterComponent,
 		BookCardComponent,
+		BookEditComponent,
 	],
 	imports: [CommonModule, ViewsRoutingModule],
 })
