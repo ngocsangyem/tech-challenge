@@ -15,8 +15,14 @@
 			"@core/*": [
 				"src/app/core/*"
 			],
-			"@modules/*": [
-				"src/app/modules/*"
+			"@views/*": [
+				"src/app/views/*"
+			],
+			"@components/*": [
+				"src/app/views/components/*"
+			],
+			"@pages/*": [
+				"src/app/views/pages/*"
 			],
 		},
 		"module": "esnext",

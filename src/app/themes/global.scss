@@ -1,0 +1,19 @@
+@import './global/reset';
+@import './global/root';
+@import './global/typography';
+@import './global/grid';
+@import './global/icons';
+
+html,
+body {
+	font-family: var(--font-family-primary);
+	font-size: 16px;
+	color: #333333;
+	font-weight: var(--font-family-normal);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	height: 30000px;
+}

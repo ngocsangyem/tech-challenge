@@ -1,0 +1,57 @@
+@import 'mixins';
+
+.book-header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 500;
+	padding-top: rem(10px);
+	padding-bottom: rem(10px);
+	background-color: #ffffff;
+	transition: box-shadow 0.3s ease-in-out;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__logo {
+		img {
+			width: 150px;
+		}
+	}
+
+	&__search {
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		transform: translateY(-50%);
+
+		@include respond-above(lg) {
+			a {
+				transition: color 0.3s ease-in-out;
+			}
+
+			&:hover {
+				a {
+					color: var(--primary-color);
+				}
+			}
+		}
+
+		@include respond-below(lg) {
+
+			&:active {
+				a {
+					color: var(--primary-color);
+				}
+			}
+		}
+	}
+
+	&--is-active {
+		box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .08);
+	}
+}

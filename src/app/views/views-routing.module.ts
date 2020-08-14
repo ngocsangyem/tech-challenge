@@ -1,12 +1,27 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { BookViewComponent } from './pages/book-view/book-view.component';
-import { BookDetailComponent } from './pages/book-detail/book-detail.component';
+
+import { ViewsComponent } from './views.component';
+import { BookViewComponent, BookDetailComponent } from './pages';
 
 const routes: Routes = [
-	{ path: '/book-views', component: BookViewComponent },
-	{ path: '/book-detail', component: BookDetailComponent },
+	{
+		path: '',
+		component: ViewsComponent,
+		children: [
+			{ path: '', redirectTo: '/book-views', pathMatch: 'full' },
+			{
+				path: 'book-views',
+				component: BookViewComponent,
+				children: [
+					{
+						path: ':name',
+						component: BookDetailComponent,
+					},
+				],
+			},
+		],
+	},
 ];
 
 @NgModule({

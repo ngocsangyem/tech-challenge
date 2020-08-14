@@ -1,0 +1,56 @@
+@font-face {
+	font-family: 'Font Awesome 5 Pro';
+	src: url('../../../assets/fonts/fa-light-300.eot?58403354');
+	src: url('../../../assets/fonts/fa-light-300.eot?58403354#iefix') format('embedded-opentype'),
+		url('../../../assets/fonts/fa-light-300.woff2?58403354') format('woff2'),
+		url('../../../assets/fonts/fa-light-300.woff?58403354') format('woff'),
+		url('../../../assets/fonts/fa-light-300.ttf?58403354') format('truetype'),
+		url('../../../assets/fonts/fa-light-300.svg?58403354#fontawesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.fal {
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 300;
+}
+
+.fa-search:before {
+	content: '\f002';
+}
+
+.fa-heart:before {
+	content: '\f004';
+}
+
+.fa-star:before {
+	content: '\f005';
+}
+
+.fa-times:before {
+	content: '\f00d';
+}
+
+.fa-book:before {
+	content: '\f02d';
+}
+
+.fa-bookmark:before {
+	content: '\f02e';
+}
+
+.fa-star-half:before {
+	content: '\f089';
+}
+
+.fa-external-link:before {
+	content: '\f08e';
+}
+
+.fa-pencil-alt:before {
+	content: '\f303';
+}
+
+.fa-user-alt:before {
+	content: '\f406';
+}

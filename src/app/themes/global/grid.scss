@@ -1,0 +1,39 @@
+@import '../mixins/breakpoint';
+
+.container {
+	width: 100%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@include respond-above(sm) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@include respond-above(md) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@include respond-above(lg) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@include respond-above(xl) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+@include respond-above(xxl) {
+	.container {
+		max-width: 1320px;
+	}
+}
