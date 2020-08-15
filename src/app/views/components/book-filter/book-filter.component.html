@@ -1,5 +1,10 @@
 <section class="book-filter">
-	<div class="book-filter__container container">
-
+	<div class="book-filter__container">
+		<select class="book-filter__select">
+			<option *ngFor="let option of selectOptions" [value]="option">{{option}}</option>
+		</select>
+		<div class="book-filter__arrow">
+			<i class="fal fa-chevron-down"></i>
+		</div>
 	</div>
 </section>

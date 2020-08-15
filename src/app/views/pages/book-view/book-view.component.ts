@@ -13,5 +13,8 @@ export class BookViewComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.books$ = this.bookService.getAllBooks();
+		this.books$.subscribe((book) => {
+			console.log('BookViewComponent -> ngOnInit -> book', book);
+		});
 	}
 }

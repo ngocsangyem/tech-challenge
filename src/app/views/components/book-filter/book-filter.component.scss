@@ -1,0 +1,44 @@
+@import 'mixins';
+
+.book-filter {
+	margin-bottom: 4rem;
+	display: flex;
+	justify-content: flex-end;
+
+	&__container {
+		display: inline-block;
+		position: relative;
+	}
+
+	&__select {
+		margin-left: auto;
+		padding: rem(15px);
+		width: 200px;
+
+		display: block;
+
+		border: none;
+		background-color: var(--light-color);
+		box-shadow: var(--box-shadow);
+
+		font-size: 1rem;
+
+
+		-moz-appearance: none;
+		-webkit-appearance: none;
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		right: rem(15px);
+
+		transform: translateY(-50%);
+
+		pointer-events: none;
+	}
+}

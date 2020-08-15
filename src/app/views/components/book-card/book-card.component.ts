@@ -11,4 +11,8 @@ export class BookCardComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {}
+
+	hasImage(): boolean {
+		return !!this.book.volumeInfo.imageLinks;
+	}
 }
