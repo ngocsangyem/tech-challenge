@@ -11,6 +11,7 @@ import {
 } from './components';
 
 import { ViewsComponent } from './views.component';
+import { BookFilterComponent } from './components/book-filter/book-filter.component';
 
 @NgModule({
 	declarations: [
@@ -22,6 +23,7 @@ import { ViewsComponent } from './views.component';
 		BookCardComponent,
 		BookEditComponent,
 		BannerComponent,
+		BookFilterComponent,
 	],
 	imports: [ViewsRoutingModule],
 })
