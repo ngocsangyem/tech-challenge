@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { SharedModule } from '@shared/shared.module';
+
 export const CORE_PROVIDER = [];
 
 @NgModule({

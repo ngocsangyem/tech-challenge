@@ -7,7 +7,7 @@
 	z-index: 500;
 	padding-top: rem(10px);
 	padding-bottom: rem(10px);
-	background-color: #ffffff;
+	background-color: var(--light-color);
 	transition: box-shadow 0.3s ease-in-out;
 
 	.container {
@@ -28,6 +28,10 @@
 		top: 50%;
 		right: 1rem;
 		transform: translateY(-50%);
+
+		a {
+			color: var(--neutral-shade-color-8);
+		}
 
 		@include respond-above(lg) {
 			a {

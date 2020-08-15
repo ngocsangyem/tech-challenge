@@ -1,1 +1,11 @@
-<p>book-card works!</p>
+<div class="book-card" *ngFor="let book of books">
+	<div class="book-card__image">
+		<figure>
+			<img [src]="book.volumeInfo.imageLinks.thumbnail" [alt]="book.volumeInfo.title">
+		</figure>
+	</div>
+	<div class="book-card__info">
+		<h3 class="book-card__title">{{book.volumeInfo.title}}</h3>
+		<small>by {{book.volumeInfo.authors}}</small>
+	</div>
+</div>

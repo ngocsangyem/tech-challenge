@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ViewsRoutingModule } from './views-routing.module';
 
+import { SharedModule } from '@shared/shared.module';
+
 import { BookViewComponent, BookDetailComponent } from './pages';
 import {
 	HeaderComponent,
@@ -25,6 +27,6 @@ import { BookFilterComponent } from './components/book-filter/book-filter.compon
 		BannerComponent,
 		BookFilterComponent,
 	],
-	imports: [ViewsRoutingModule],
+	imports: [ViewsRoutingModule, SharedModule],
 })
 export class ViewsModule {}

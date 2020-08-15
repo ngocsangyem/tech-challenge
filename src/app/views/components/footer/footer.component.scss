@@ -1,0 +1,12 @@
+@import 'mixins';
+
+.book-footer {
+	padding-top: rem(30px);
+	padding-bottom: rem(30px);
+	background-color: var(--neutral-shade-color-8);
+
+	&__copyright {
+		margin: 0;
+		color: var(--light-color);
+	}
+}
