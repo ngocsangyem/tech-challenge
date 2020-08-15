@@ -9,9 +9,9 @@ const routes: Routes = [
 		path: '',
 		component: ViewsComponent,
 		children: [
-			{ path: '', redirectTo: '/book-views', pathMatch: 'full' },
+			{ path: '', redirectTo: '/books', pathMatch: 'full' },
 			{
-				path: 'book-views',
+				path: 'books',
 				component: BookViewComponent,
 				children: [
 					{
