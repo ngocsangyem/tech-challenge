@@ -8,6 +8,6 @@ const REQUIRED_MODULES = [CommonModule];
 @NgModule({
 	declarations: [...SharedPipes],
 	imports: [...REQUIRED_MODULES],
-	exports: [...REQUIRED_MODULES],
+	exports: [...REQUIRED_MODULES, ...SharedPipes],
 })
 export class SharedModule {}
