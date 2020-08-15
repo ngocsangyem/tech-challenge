@@ -7,7 +7,7 @@ import { Book } from '@shared/models';
 	styleUrls: ['./book-card.component.scss'],
 })
 export class BookCardComponent implements OnInit {
-	@Input() books: Book[];
+	@Input() book: Book;
 	constructor() {}
 
 	ngOnInit(): void {}

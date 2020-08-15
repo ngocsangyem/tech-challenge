@@ -1,3 +1,9 @@
 <app-banner></app-banner>
-<app-book-card [books]="books$ | async"></app-book-card>
+<section class="book-list">
+	<div class="book-list__container container">
+		<div class="book-list__row">
+			<app-book-card *ngFor="let book of books$ | async" [book]="book"></app-book-card>
+		</div>
+	</div>
+</section>
 <!-- <app-book-filter></app-book-filter> -->

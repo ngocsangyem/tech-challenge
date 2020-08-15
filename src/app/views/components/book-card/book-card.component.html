@@ -1,12 +1,16 @@
-<ng-container *ngIf="books">
-	<div class="book-card" *ngFor="let book of books">
+<ng-container *ngIf="book">
+	<div class="book-card">
 		<div class="book-card__image">
 			<figure *ngIf="book.volumeInfo.imageLinks">
-				<img [src]="book.volumeInfo.imageLinks.thumbnail" [alt]="book.volumeInfo.title">
+				<a href="http://">
+					<img [src]="book.volumeInfo.imageLinks.thumbnail" [alt]="book.volumeInfo.title">
+				</a>
 			</figure>
 		</div>
 		<div class="book-card__info">
-			<h3 class="book-card__title">{{book.volumeInfo.title}}</h3>
+			<h3 class="book-card__title">
+				<a href="http://">{{book.volumeInfo.title}}</a>
+			</h3>
 			<small>by {{book.volumeInfo.authors | bookAuthor}}</small>
 			<p class="book-card__description">{{book.volumeInfo.description}}</p>
 		</div>

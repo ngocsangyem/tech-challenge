@@ -1,0 +1,27 @@
+@import 'mixins';
+
+.book-list {
+	margin-top: 4.5rem;
+
+	&__row {
+		--gap: 1rem;
+
+		@include respond-above(md) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-right: calc(-1 * var(--gap));
+			margin-left: calc(-1 * var(--gap));
+
+			::ng-deep {
+				app-book-card {
+					position: relative;
+					display: block;
+					flex: 0 0 50%;
+					max-width: 50%;
+					padding-right: var(--gap);
+					padding-left: var(--gap);
+				}
+			}
+		}
+	}
+}
