@@ -3,29 +3,17 @@ import { ViewsRoutingModule } from './views-routing.module';
 
 import { SharedModule } from '@shared/shared.module';
 
-import { BookViewComponent, BookDetailComponent } from './pages';
-import {
-	HeaderComponent,
-	FooterComponent,
-	BookCardComponent,
-	BookEditComponent,
-	BannerComponent,
-} from './components';
+import { BookDetailComponent, BookViewComponent } from './pages';
+import { Components } from './components';
 
 import { ViewsComponent } from './views.component';
-import { BookFilterComponent } from './components/book-filter/book-filter.component';
 
 @NgModule({
 	declarations: [
 		ViewsComponent,
-		BookViewComponent,
 		BookDetailComponent,
-		HeaderComponent,
-		FooterComponent,
-		BookCardComponent,
-		BookEditComponent,
-		BannerComponent,
-		BookFilterComponent,
+		BookViewComponent,
+		...Components,
 	],
 	imports: [ViewsRoutingModule, SharedModule],
 })

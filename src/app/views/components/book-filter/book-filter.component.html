@@ -1,6 +1,7 @@
 <section class="book-filter">
 	<div class="book-filter__container">
-		<select class="book-filter__select">
+		<select class="book-filter__select" #filter (change)="selectedFilter(filter.value)">
+			<option value="default" selected="selected" disabled="disabled">Order by</option>
 			<option *ngFor="let option of selectOptions" [value]="option">{{option}}</option>
 		</select>
 		<div class="book-filter__arrow">

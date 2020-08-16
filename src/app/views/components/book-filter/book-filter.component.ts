@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { toSnakeCase } from '@core/helpers';
 
 @Component({
 	selector: 'app-book-filter',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./book-filter.component.scss'],
 })
 export class BookFilterComponent implements OnInit {
-	selectOptions = ['All', 'Most recently', 'High rate'];
+	selectOptions = ['All', 'Most recently', 'Top view'];
+	selectedOption = 'Test';
+	@Output() select = new EventEmitter<string>();
 	constructor() {}
 
 	ngOnInit(): void {}
+
+	selectedFilter(value: string) {
+		const valueSnakeCase = toSnakeCase(value);
+		this.select.emit(valueSnakeCase);
+	}
 }

@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class BookViewComponent implements OnInit {
 	books$: Observable<Book[]>;
+	key: string;
 	constructor(private bookService: BookService) {}
 
 	ngOnInit(): void {
@@ -16,5 +17,9 @@ export class BookViewComponent implements OnInit {
 		this.books$.subscribe((book) => {
 			console.log('BookViewComponent -> ngOnInit -> book', book);
 		});
+	}
+
+	onSelectedFilter(value: string) {
+		this.key = value;
 	}
 }
