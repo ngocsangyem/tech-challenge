@@ -3,7 +3,11 @@ import { ViewsRoutingModule } from './views-routing.module';
 
 import { SharedModule } from '@shared/shared.module';
 
-import { BookDetailComponent, BookViewComponent } from './pages';
+import {
+	BookDetailComponent,
+	BookViewComponent,
+	SearchComponent,
+} from './pages';
 import { Components } from './components';
 
 import { ViewsComponent } from './views.component';
@@ -13,6 +17,7 @@ import { ViewsComponent } from './views.component';
 		ViewsComponent,
 		BookDetailComponent,
 		BookViewComponent,
+		SearchComponent,
 		...Components,
 	],
 	imports: [ViewsRoutingModule, SharedModule],
