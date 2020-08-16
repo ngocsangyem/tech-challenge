@@ -1,1 +1,34 @@
-<p>book-detail works!</p>
+<ng-container *ngIf="bookData">
+	<section class="book-banner">
+		<div class="book-banner__background"
+			[ngStyle]="{'background-image': 'url(' + bookData.volumeInfo.imageLinks.thumbnail + ')'}"></div>
+		<figure class="book-banner__image">
+			<img [src]="bookData.volumeInfo.imageLinks.thumbnail" [alt]="bookData.title">
+		</figure>
+	</section>
+
+	<section class="book-info">
+		<div class="container">
+			<h1 class="book-info__title">{{bookData.volumeInfo.title}}</h1>
+			<small class="book-info__author">by
+				{{bookData.volumeInfo.authors | bookAuthor}}
+			</small>
+			<div class="book-info__content">
+				<p [innerHTML]="bookData.volumeInfo.description"></p>
+				<p *ngIf="bookData.volumeInfo.infoLink">
+					More Information: <a [href]="bookData.volumeInfo.infoLink"
+						[target]="'_blank'">{{bookData.volumeInfo.infoLink}}</a>
+				</p>
+				<p *ngIf="bookData.volumeInfo.previewLink">
+					Preview link: <a [href]="bookData.volumeInfo.previewLink"
+						[target]="'_blank'">{{bookData.volumeInfo.previewLink}}</a>
+				</p>
+				<p *ngIf="bookData.saleInfo.buyLink">
+					Buy link: <a [href]="bookData.saleInfo.buyLink"
+						[target]="'_blank'">{{bookData.saleInfo.buyLink}}</a>
+				</p>
+			</div>
+		</div>
+
+	</section>
+</ng-container>

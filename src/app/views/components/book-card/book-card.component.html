@@ -2,7 +2,8 @@
 	<div class="book-card">
 		<div class="book-card__image">
 			<figure>
-				<a href="http://">
+				<!-- Current situation is that when url contains query params, the next time we navigate to this url it will get encoded - causing ActivatedRoute to ignore these query params and destroying url-params exist in the url because the encoded q-params are concatenated to the url-param...So we need BE sent us the url of api instead of id -->
+				<a [routerLink]="['/books', book.id]">
 					<img *ngIf="hasImage(); else defaultBookImage" [src]="book.volumeInfo.imageLinks.thumbnail"
 						[alt]="book.volumeInfo.title">
 				</a>
@@ -10,7 +11,7 @@
 		</div>
 		<div class="book-card__info">
 			<h3 class="book-card__title">
-				<a href="http://">{{book.volumeInfo.title}}</a>
+				<a [routerLink]="['/books', book.id]">{{book.volumeInfo.title}}</a>
 			</h3>
 			<small class="book-card__rating">rating:
 				{{!!book.volumeInfo.averageRating ? book.volumeInfo.averageRating : '1'}}</small>

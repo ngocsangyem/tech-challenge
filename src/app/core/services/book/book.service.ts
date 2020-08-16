@@ -15,7 +15,7 @@ export class BookService {
 	constructor(private API: ApiService) {}
 
 	init() {
-		this.API.GET(environment.api.book)
+		this.API.GET(environment.api.books)
 			.pipe(
 				tap(() => console.log('HTTP request executed')),
 				map((res) => Object.values(res['items']))
@@ -25,5 +25,11 @@ export class BookService {
 
 	getAllBooks(): Observable<Book[]> {
 		return this.book$;
+	}
+
+	getBook(bookId: string): Observable<Book> {
+		console.log(`${environment.api.book}/${bookId}`);
+
+		return this.API.GET(`${environment.api.book}/${bookId}`);
 	}
 }

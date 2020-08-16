@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class BookViewComponent implements OnInit {
 	books$: Observable<Book[]>;
 	key: string;
+
 	constructor(private bookService: BookService) {}
 
 	ngOnInit(): void {

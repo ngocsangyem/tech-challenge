@@ -6,8 +6,9 @@ export const environment = {
 	production: false,
 
 	api: {
-		book:
+		books:
 			'https://www.googleapis.com/books/v1/volumes?q=stephen+king+inauthor:king&maxResults=40&printType=books',
+		book: 'https://www.googleapis.com/books/v1/volumes',
 	},
 };
 

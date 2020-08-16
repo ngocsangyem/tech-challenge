@@ -13,12 +13,10 @@ const routes: Routes = [
 			{
 				path: 'books',
 				component: BookViewComponent,
-				children: [
-					{
-						path: ':name',
-						component: BookDetailComponent,
-					},
-				],
+			},
+			{
+				path: 'books/:id',
+				component: BookDetailComponent,
 			},
 		],
 	},
