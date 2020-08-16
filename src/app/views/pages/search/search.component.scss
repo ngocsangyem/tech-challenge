@@ -1,0 +1,47 @@
+.book-search {
+	&__field {
+		max-width: 600px;
+
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+
+		position: relative;
+	}
+
+	&__input {
+		display: block;
+
+		width: 100%;
+		padding: 7px 0;
+
+		border: 0;
+		color: #333;
+		letter-spacing: 1px;
+		border-bottom: 1px solid var(--neutral-shade-color-4);
+
+		font-size: 1rem;
+
+		&:focus,
+		&:valid {
+			outline: none;
+
+			~.book-search__input-border {
+				width: 100%;
+				transition: 0.4s;
+				left: 0;
+			}
+		}
+	}
+
+	&__input-border {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 2px;
+		background-color: var(--primary-color);
+		transition: 0.4s;
+	}
+}

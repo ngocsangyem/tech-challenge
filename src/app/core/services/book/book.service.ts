@@ -32,4 +32,24 @@ export class BookService {
 
 		return this.API.GET(`${environment.api.book}/${bookId}`);
 	}
+
+	searchBooks(search: string): Observable<Book[]> {
+		const encodedURI = encodeURI(
+			'https://www.googleapis.com/books/v1/volumes?q=' +
+				search +
+				'+inauthor:king&maxResults=5&printType=books'
+		);
+
+		return this.API.GET(encodedURI);
+	}
+
+	searchBookByIsbn(isbn: string): Observable<Book[]> {
+		const encodedURI = encodeURI(
+			'https://www.googleapis.com/books/v1/volumes?q=isbn:' +
+				isbn +
+				'&maxResults=3'
+		);
+
+		return this.API.GET(encodedURI);
+	}
 }
