@@ -12,7 +12,9 @@
 			<h3 class="book-card__title">
 				<a href="http://">{{book.volumeInfo.title}}</a>
 			</h3>
-			<small>by {{book.volumeInfo.authors | bookAuthor}}</small>
+			<small class="book-card__rating">rating:
+				{{!!book.volumeInfo.averageRating ? book.volumeInfo.averageRating : '1'}}</small>
+			<small class="book-card__author">by {{book.volumeInfo.authors | bookAuthor}}</small>
 			<p class="book-card__description">{{book.volumeInfo.description}}</p>
 			<small class="book-card__publish-date">{{book.volumeInfo.publishedDate}}</small>
 		</div>

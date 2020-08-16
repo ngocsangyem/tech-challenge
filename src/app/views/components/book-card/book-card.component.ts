@@ -7,6 +7,7 @@ import { Book } from '@shared/models';
 	styleUrls: ['./book-card.component.scss'],
 })
 export class BookCardComponent implements OnInit {
+	starTotal = 5;
 	@Input() book: Book;
 	constructor() {}
 
