@@ -1,8 +1,14 @@
 <section class="book-search">
 	<div class="container">
-		<div class="book-search__field">
-			<input type="text" class="book-search__input" required placeholder="Enter your book here">
-			<span class="book-search__input-border"></span>
+		<form class="book-search__form" [formGroup]="form">
+			<div class="book-search__field">
+				<input type="text" class="book-search__input" formControlName="input_search" required
+					placeholder="Enter your book here">
+				<span class="book-search__input-border"></span>
+			</div>
+		</form>
+		<div class="book-search__result">
+			<app-book-card *ngFor="let book of books$ | async" [book]="book"></app-book-card>
 		</div>
 	</div>
 </section>

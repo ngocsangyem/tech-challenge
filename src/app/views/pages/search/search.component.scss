@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .book-search {
 	&__field {
 		max-width: 600px;
@@ -43,5 +45,47 @@
 		height: 2px;
 		background-color: var(--primary-color);
 		transition: 0.4s;
+	}
+
+	&__result {
+		--gap: 1rem;
+
+		::ng-deep {
+			app-book-card {
+				display: block;
+
+				margin-bottom: 2rem;
+			}
+		}
+
+		@include respond-above(md) {
+			::ng-deep {
+				app-book-card {
+					margin-bottom: 4rem;
+				}
+			}
+		}
+
+		@include respond-above(lg) {
+			display: flex;
+			flex-wrap: wrap;
+
+			margin-right: calc(-1 * var(--gap));
+			margin-left: calc(-1 * var(--gap));
+
+			::ng-deep {
+				app-book-card {
+					position: relative;
+
+					display: block;
+					flex: 0 0 50%;
+
+					max-width: 50%;
+
+					padding-right: var(--gap);
+					padding-left: var(--gap);
+				}
+			}
+		}
 	}
 }

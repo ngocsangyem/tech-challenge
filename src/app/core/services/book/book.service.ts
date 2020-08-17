@@ -3,7 +3,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 import { ApiService } from '../../http';
-import { Book } from '@shared/models';
+import { Book, BookData } from '@shared/models';
 import { environment } from '@env/environment';
 
 @Injectable({
@@ -33,21 +33,11 @@ export class BookService {
 		return this.API.GET(`${environment.api.book}/${bookId}`);
 	}
 
-	searchBooks(search: string): Observable<Book[]> {
+	searchBooks(search: string): Observable<BookData> {
 		const encodedURI = encodeURI(
 			'https://www.googleapis.com/books/v1/volumes?q=' +
 				search +
 				'+inauthor:king&maxResults=5&printType=books'
-		);
-
-		return this.API.GET(encodedURI);
-	}
-
-	searchBookByIsbn(isbn: string): Observable<Book[]> {
-		const encodedURI = encodeURI(
-			'https://www.googleapis.com/books/v1/volumes?q=isbn:' +
-				isbn +
-				'&maxResults=3'
 		);
 
 		return this.API.GET(encodedURI);
