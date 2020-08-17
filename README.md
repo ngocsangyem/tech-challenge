@@ -1,5 +1,18 @@
 ![GForces][logo]
 
+## Features
+
+|                           | Available |
+| ------------------------- | :-------: |
+| Responsive layout         |    ✅     |
+| Sass                      |    ✅     |
+| Css Animation             |    ✅     |
+| Infomation of book        |    ✅     |
+| Sort by date and rate     |    ✅     |
+| Load specific book        |    ✅     |
+| Search book with debounce |    ✅     |
+| Unit test                 |    ❌     |
+
 ## Tech Challenge ([angular][6])
 
 This is a simple technical challenge to show us your ability using angular. If you run into any issues, please contact Chris at [chris.munn@gforces.co.uk][1]. Spend as little or as long as you wish on it, but please try to complete as much as possible. Functionality is the main priority over design, however we will be checking over your use of CSS / Sass. You'll be asked to talk about your code in your second interview.
@@ -8,13 +21,13 @@ This is a simple technical challenge to show us your ability using angular. If y
 
 ### Base requirements
 
-- Angular projects built at GForces use the [Airbnb JavaScript Style Guide][2] to keep code consistent and readable. The codebase within this project has linting errors, and these will need to be resolved so that you can continue development.
-- We would then like you to set up the [Angular Router][3], create a `BookView` component and apply it to the route `/books`
-- Using [Angular Http][4] (or another library if you'd prefer), we'd like you to grab and display a list of 40 Stephen King novels using the [Google Books API][5].
-- Use a responsive design approach to make the layout work on a range of screen sizes
-- Try to create a good user experience
-- Think about folder structure, and keeping code organised.
-- Consider cross-browser support (Chrome, Firefox, Safari, IE9+)
+-   Angular projects built at GForces use the [Airbnb JavaScript Style Guide][2] to keep code consistent and readable. The codebase within this project has linting errors, and these will need to be resolved so that you can continue development.
+-   We would then like you to set up the [Angular Router][3], create a `BookView` component and apply it to the route `/books`
+-   Using [Angular Http][4] (or another library if you'd prefer), we'd like you to grab and display a list of 40 Stephen King novels using the [Google Books API][5].
+-   Use a responsive design approach to make the layout work on a range of screen sizes
+-   Try to create a good user experience
+-   Think about folder structure, and keeping code organised.
+-   Consider cross-browser support (Chrome, Firefox, Safari, IE9+)
 
 ---
 
@@ -22,8 +35,8 @@ This is a simple technical challenge to show us your ability using angular. If y
 
 All of the above requirements, plus:
 
-- Use a pre-processor (SASS, LESS, Stylus, etc.)
-- Create some CSS animations
+-   Use a pre-processor (SASS, LESS, Stylus, etc.)
+-   Create some CSS animations
 
 ---
 
@@ -31,8 +44,8 @@ All of the above requirements, plus:
 
 All of the above requirements, plus:
 
-- Show more information on selection of a book
-- Add option to sort results by published date/price/rating/categories
+-   Show more information on selection of a book
+-   Add option to sort results by published date/price/rating/categories
 
 ---
 
@@ -40,12 +53,12 @@ All of the above requirements, plus:
 
 All of the above requirements, plus:
 
-- Anything else that demonstrates your skills and competency as a developer. Here's a few possible ideas to get you started:
+-   Anything else that demonstrates your skills and competency as a developer. Here's a few possible ideas to get you started:
 
-* Create a more advanced search with extra features
-* Create custom routes to load specific books
-* Introduce Unit testing
-* Use the TDD process
+*   Create a more advanced search with extra features
+*   Create custom routes to load specific books
+*   Introduce Unit testing
+*   Use the TDD process
 
 ---
 
